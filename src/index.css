@@ -1,0 +1,32 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
+@import "tailwindcss";
+@tailwind utilities;
+
+body{
+  font-family: 'Poppins', sans-serif;
+}
+* {
+  font-family: 'Poppins', sans-serif;
+}
+
+/* Custom classes */
+.input-style {
+  @apply w-full px-4 py-2 border border-gray-300 rounded-lg shadow-inner focus:ring-2 focus:ring-teal-500 focus:outline-none;
+}
+
+@layer utilities {
+  @keyframes fadeInUp {
+    0% {
+      opacity: 0;
+      transform: translateY(10px);
+    }
+    100% {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+
+  .animate-fadeInUp {
+    animation: fadeInUp 0.5s ease-out;
+  }
+}
